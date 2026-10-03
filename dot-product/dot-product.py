@@ -4,8 +4,7 @@ def dot_product(x: list, y: list) -> float:
     """
     Returns the dot product as a float.
     """
-    result = 0
-    for i in range(len(x)):
-        result += x[i]*y[i]
+    x = np.asarray(x, dtype=float)
+    y = np.asarray(y, dtype=float)
         
-    return float(result)
+    return float(np.dot(x, y))
